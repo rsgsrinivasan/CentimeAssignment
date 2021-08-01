@@ -1,4 +1,4 @@
-Feature: Get daily stock price time series data from API
+Feature: Get daily stock price time series data from AlphaVantage API
     @regularTests
     Scenario: Verify response from API
         Given the name of the company for stock history
