@@ -1,0 +1,2 @@
+class ApiResources:
+    get = "query"
