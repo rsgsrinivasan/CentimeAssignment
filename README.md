@@ -8,14 +8,22 @@ The library is designed to be used with the behave BDD test framework using *beh
 Python 3.8.5
 
 ## Installation
+It is recommended to create virtual environment and use the present library. Navigate to the main directory and run the following commands:
 
+Linux users:
 ```bash
-$ cd centime/Scripts
+$ virtualenv alphavantage
+$ source alphavantage/bin/activate
+$ pip install -r requirements.txt
+```
+Windows users:
+```bash
+$ virtualenv alphavantage
+$ cd alphavantage/Scripts
 $ activate
 $ cd ../..
 $ pip install -r requirements.txt
 ```
-
 
 ## Basic usage
 - In the present library, the API endpoint and function type are defined as `https://www.alphavantage.co/` and `function = TIME_SERIES_DAILY` in `utilities/properties.ini` file. The function can be changed based on requirement. 
