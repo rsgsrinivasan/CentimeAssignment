@@ -38,7 +38,7 @@ Examples:
     - **Scenario 3**: Verify json response from API for last refreshed stock price data
     - **Scenario 4**: Verify response from API with Invalid company code
     - **Scenario 5**: Verify throttling limit of API by requesting more than 5 requests per minute
-- **Note**: It is recomended *not to change* any of the symbols already defined in `Examples` of other `scenarios` other than the `Scenario: Verify json response from API for last refreshed stock price data`.. 
+- **Note**: It is recomended *not to change* any of the symbols already defined in `Examples` of other `scenarios` other than the `Scenario 3: Verify json response from API for last refreshed stock price data`.. 
 
 ## Running all test cases together
 To run all the test cases together and generate html report use the command:
