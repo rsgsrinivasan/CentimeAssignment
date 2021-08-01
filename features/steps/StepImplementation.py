@@ -4,18 +4,15 @@ import requests
 from behave import *
 import json
 import time
-
+import behave
 
 @given('the name of the company for stock history')
 def stepImplementation(context):
     context.requestCount = 1
-    # context.ApiKey = open("ApiKey.txt","r").read()
     context.URL = getConfig()['API']['endpoint'] + ApiResources.get + "?" + "function=" + getConfig()['FUNCTION']['function'] + "&" + "symbol=" + "IBM" + "&" + "apikey=" + context.ApiKey
 
 @given('the name of the company for stock history (no APIKEY)')
 def stepImplementation(context):
-    context.requestCount = 1
-    # context.ApiKey = open("ApiKey.txt","r").read()
     context.URL = getConfig()['API']['endpoint'] + ApiResources.get + "?" + "function=" + getConfig()['FUNCTION']['function'] + "&" + "symbol=" + "IBM" + "&" + "apikey=" + context.ApiKey
 
 @when('we get the response from API')
@@ -43,7 +40,6 @@ def stepImplementation(context):
 
 @given('the name of the {symbol} for stock history')
 def stepImplementation(context,symbol):
-    # context.ApiKey = open("ApiKey.txt","r").read()
     context.URL = getConfig()['API']['endpoint'] + ApiResources.get + "?" + "function=" + getConfig()['FUNCTION']['function'] + "&" + "symbol=" + symbol + "&" + "apikey=" + context.ApiKey
 
 

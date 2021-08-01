@@ -3,7 +3,7 @@ from utilities.logger import *
 
 
 def before_all(context):
-    context.log = utility.getLogger()
+    context.log = logger.getLogger()
     context.ApiKey = open("ApiKey.txt","r").read()
 
 

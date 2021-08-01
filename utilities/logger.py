@@ -1,7 +1,7 @@
 import logging
 import inspect
 
-class utility:
+class logger:
     def __init__(self) -> None:
         pass
 
