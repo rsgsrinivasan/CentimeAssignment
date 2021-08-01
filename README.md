@@ -48,7 +48,7 @@ $ behave -f html -o Reports/behave-report.html
 **Note**: There will be a `60 seconds` pause before executing the `throttling test` of `5 requests per minute` when using the above command.
 
 ## Running a single test
-The test cases are defined with certain tags namely `@regularTests`, `@regularTestswithoutAPIKEY` and `@throttlingTest5RPM`.
+The test cases are defined with certain tags namely `@regularTests`, `@regularTestswithoutAPIKEY` and `@throttlingTest5RPM`. For running a selected test using tags use the command:
 ```bash
 $ behave --tags="@throttlingTest5RPM" -f html -o Reports/behave-report.html
 ```
