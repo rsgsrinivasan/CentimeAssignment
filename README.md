@@ -2,7 +2,7 @@
 
 The present library tests the alpha vantage api for **daily** time series data.
 
-The library is designed to be used with the behave BDD test framework using *behave* module. 
+The present testing library is designed using BDD test framework using *behave* module. 
 
 ## Prerequisites
 Python 3.8.5
