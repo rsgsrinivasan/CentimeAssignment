@@ -2,11 +2,9 @@ import os, time
 from utilities.logger import *
 from behave import fixture
 
-
 def before_all(context):
-    context.log = logger.getLogger()
+    context.log = getLogger()
     context.ApiKey = open("ApiKey.txt","r").read()
-
 
 def before_scenario(context,scenario):
     if "throttlingTest5RPM" in scenario.tags:
