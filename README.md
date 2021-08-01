@@ -24,6 +24,10 @@ $ activate
 $ cd ../..
 $ pip install -r requirements.txt
 ```
+**Note**: In order to create virtual environment `virtualenv` library is required, else the above `virtualenv alphavantage` command wont work. To install virtualenv run the below command:
+```bash
+$ pip install virtualenv
+```
 
 ## Basic usage
 - In the present library, the API endpoint and function type are defined as `https://www.alphavantage.co/` and `function = TIME_SERIES_DAILY` in `utilities/properties.ini` file. The function can be changed based on requirement. 
