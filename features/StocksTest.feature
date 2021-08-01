@@ -21,7 +21,7 @@ Feature: Get daily stock price time series data from API
         |  IBMSA |
 
     @throttlingTest5RPM
-    Scenario Outline: Requesting 5 requests per minute
+    Scenario Outline: Verify throttling limit of API by requesting more than 5 requests per minute
         Given the name of the <symbol> for stock history
         When we get the stock price history
         Then the 6th stock price query is unsuccessfull <count>

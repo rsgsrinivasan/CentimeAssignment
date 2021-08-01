@@ -1,11 +1,11 @@
-# Alpha Vantage daily stock time series API test Library
+# Alpha Vantage daily stock time series API testing Library
 
 The present library tests the alpha vantage api for daily time series data.
 
 The library is designed to be used with the behave BDD test framework
 
 ## Prerequisites
-Python 3.8
+Python 3.8.5
 
 ## Installation
 
@@ -32,15 +32,19 @@ Examples:
 |SHOP.TRT|
 |RELIANCE.BSE|
 ```
-
-- Note: It is not recomended to change any of the symbols already defined in `Examples` of other `scenarios` other than the `Scenario: Verify json response from API for last refreshed stock price data`.. 
+- The testing library tests the alphavantage API for the following five scenarios
+    - **Scenario 1**: Verify response from API
+    - **Scenario 2**: Verify json response from API for last refreshed stock price data
+    - **Scenario 3**: Verify response from API with Invalid company code
+    - **Scenario 4**: Verify throttling limit of API by requesting more than 5 requests per minute
+- **Note**: It is not recomended to change any of the symbols already defined in `Examples` of other `scenarios` other than the `Scenario: Verify json response from API for last refreshed stock price data`.. 
 
 ## Running all test cases together
 To run all the test cases together and generate html report use the command:
 ```bash
 $ behave -f html -o Reports/behave-report.html
 ```
-Note: There will be a `60 seconds` pause before executing the `throttling test` of `5 requests per minute`.
+**Note**: There will be a `60 seconds` pause before executing the `throttling test` of `5 requests per minute`.
 
 ## Running a single test
 The test cases are defined with certain tags namely `@regularTests` and `@throttlingTest5RPM`.
