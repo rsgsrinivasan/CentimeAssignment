@@ -34,9 +34,10 @@ Examples:
 ```
 - The testing library tests the alphavantage API for the following five scenarios
     - **Scenario 1**: Verify response from API
-    - **Scenario 2**: Verify json response from API for last refreshed stock price data
-    - **Scenario 3**: Verify response from API with Invalid company code
-    - **Scenario 4**: Verify throttling limit of API by requesting more than 5 requests per minute
+    - **Scenario 2**: Verify response from API with no APIKEY
+    - **Scenario 3**: Verify json response from API for last refreshed stock price data
+    - **Scenario 4**: Verify response from API with Invalid company code
+    - **Scenario 5**: Verify throttling limit of API by requesting more than 5 requests per minute
 - **Note**: It is not recomended to change any of the symbols already defined in `Examples` of other `scenarios` other than the `Scenario: Verify json response from API for last refreshed stock price data`.. 
 
 ## Running all test cases together
@@ -44,10 +45,10 @@ To run all the test cases together and generate html report use the command:
 ```bash
 $ behave -f html -o Reports/behave-report.html
 ```
-**Note**: There will be a `60 seconds` pause before executing the `throttling test` of `5 requests per minute`.
+**Note**: There will be a `60 seconds` pause before executing the `throttling test` of `5 requests per minute` when using the above command.
 
 ## Running a single test
-The test cases are defined with certain tags namely `@regularTests` and `@throttlingTest5RPM`.
+The test cases are defined with certain tags namely `@regularTests`, `@regularTestswithoutAPIKEY` and `@throttlingTest5RPM`.
 ```bash
 $ behave --tags="@throttlingTest5RPM" -f html -o Reports/behave-report.html
 ```
