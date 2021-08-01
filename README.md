@@ -24,7 +24,7 @@ $ activate
 $ cd ../..
 $ pip install -r requirements.txt
 ```
-**Note**: In order to create virtual environment `virtualenv` library is required, else the above `virtualenv alphavantage` command wont work. To install virtualenv run the below command:
+**Note**: In order to create virtual environment `virtualenv` library is required, else the above `$ virtualenv alphavantage` command wont work. To install virtualenv run the below command:
 ```bash
 $ pip install virtualenv
 ```
