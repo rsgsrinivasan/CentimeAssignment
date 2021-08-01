@@ -1,5 +1,6 @@
 import os, time
 from utilities.logger import *
+from behave import fixture
 
 
 def before_all(context):
