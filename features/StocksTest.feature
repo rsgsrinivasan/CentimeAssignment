@@ -12,10 +12,15 @@ Feature: Get daily stock price time series data from AlphaVantage API
         Then the stock price query is unsuccessfull with error invalid key
     
     @regularTests
-    Scenario: Verify json response from API for last refreshed stock price data
-        Given the name of the company for stock history
+    Scenario Outline: Verify json response from API for last refreshed stock price data
+        Given the name of the <symbol> for stock history
         When we get the response from API
         Then the json response should contain previous days stock price low and high
+        Examples:
+        |count| symbol |
+        |1    |  IBM   |
+        |2    | DAI.DEX|
+        |3    |TSCO.LON|
 
     @regularTests
     Scenario Outline: Verify response from API with Invalid company code
